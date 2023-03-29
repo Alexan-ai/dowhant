@@ -55,19 +55,19 @@
           v-model="slide"
           height="350px"
         >
-          <q-carousel-slide name="first" img-src="/public/micro.jpg">
+          <q-carousel-slide name="first" img-src="src/assets/img/micro.jpg">
             <div class="absolute-bottom custom-caption">
               <div class="text-h2">Barquisimeto</div>
               <div class="text-subtitle1">10/5/2023</div>
             </div>
           </q-carousel-slide>
-          <q-carousel-slide name="second" img-src="/public/micro2.jpg">
+          <q-carousel-slide name="second" img-src="src/assets/img/micro2.jpg">
             <div class="absolute-bottom custom-caption">
               <div class="text-h2">Valencia</div>
               <div class="text-subtitle1">20/6/2023</div>
             </div>
           </q-carousel-slide>
-          <q-carousel-slide name="third" img-src="/public/micro3.jpg">
+          <q-carousel-slide name="third" img-src="src/assets/img/micro3.jpg">
             <div class="absolute-bottom custom-caption">
               <div class="text-h2">Caracas</div>
               <div class="text-subtitle1">30/8/2023</div>
@@ -87,16 +87,16 @@
         </p>
       </div>
       <div class="col-12 col-md-6 lanzamientos">
-        <img class="shadow-3" src="/public/9.jpg" alt="" />
+        <img class="shadow-3" src="src/assets/img/9.jpg" alt="" />
       </div>
       <div class="col-12 col-md-6 lanzamientos">
-        <img class="shadow-3" src="/public/vuelve.png" alt="" />
+        <img class="shadow-3" src="src/assets/img/vuelve.png" alt="" />
       </div>
       <div class="col-12 col-md-6 lanzamientos">
-        <img class="shadow-3" src="/public/amate.jpg" alt="" />
+        <img class="shadow-3" src="src/assets/img/amate.jpg" alt="" />
       </div>
       <div class="col-12 col-md-6 lanzamientos">
-        <img class="shadow-3" src="/public/dont.jpg" alt="" />
+        <img class="shadow-3" src="src/assets/img/dont.jpg" alt="" />
       </div>
     </div>
   </div>
