@@ -1,0 +1,209 @@
+// app global css in SCSS form
+body {
+  overflow: none;
+  background-color: rgb(245, 239, 239);
+}
+
+.plan {
+  margin-top: 100px;
+}
+.container {
+  width: 100%;
+  max-width: 250px;
+}
+
+.visualizer span {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  bottom: 35px;
+  color: #fa534b;
+}
+
+.buttonRegister__ {
+  text-decoration: none;
+  outline: none;
+}
+.buttonRegister {
+  background-color: #fa534b;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.buttonLogin {
+  background-color: #fa534b;
+  border: 2px solid black;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+// RESPONSIVE
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 320px) and (max-width: 991.98px) {
+  .Hero .wrapper .imgBox {
+    right: -245px;
+    animation: none;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    transform: rotateY(180deg);
+  }
+
+  .Hero .wrapper .hero_text {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Hero .wrapper {
+    height: calc(90vh - 80px);
+  }
+
+  .topline {
+    color: #b9b9b9;
+  }
+
+  .Hero .btns {
+    position: absolute;
+    bottom: 10%;
+  }
+
+  .Hero .wrapper::before {
+    position: absolute;
+    top: 60%;
+    animation: none;
+  }
+
+  .wrapper::before {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+  }
+  .Hero .wrapper .hero_text .multi-text {
+    font-size: 60px;
+  }
+  .Hero .parrafo-hero {
+    display: none;
+  }
+
+  .content .row {
+    text-align: center;
+  }
+
+  .content .t-1 {
+    text-align: left;
+  }
+
+  .content p {
+    text-align: left;
+  }
+
+  .content .p_2 {
+    text-align: center;
+  }
+
+  .wrapper::after {
+    animation: none;
+  }
+
+  .content h4 {
+    font-size: 20px;
+  }
+
+  .content h5 {
+    text-align: left;
+    font-size: 20px;
+  }
+  .secciones .info-dash img {
+    width: 100%;
+  }
+
+  .secciones .text-bold {
+    font-size: 20px;
+  }
+
+  .secciones .img_order1 {
+    order: 2;
+  }
+
+  .secciones .tx_order1 {
+    order: 1;
+  }
+
+  .secciones .img_order3 {
+    order: 2;
+  }
+
+  .secciones .tx_order3 {
+    order: 1;
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+
+  .caracter .so-much {
+    width: 100%;
+    text-align: center;
+  }
+
+  .caracater .content_img img {
+    width: 100%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}
