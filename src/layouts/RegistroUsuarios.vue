@@ -1,208 +1,168 @@
 <template>
-  <div class="fit row wrap justify-center items-center content-start">
-    <div class="q-mb-md">
-      <div class="col-12 self-center q-pa-md">
-        <q-form class="q-gutter-md">
-          <q-input
-            filled
-            id="name"
-            label="Your name *"
-            hint="Name and surname"
-          />
-          <q-input
-            filled
-            id="addres"
-            label="Your age *"
-            hint="Name and surname"
-          />
-          <q-input
-            filled
-            id="Number"
-            label="Your addres *"
-            hint="Your country"
-          />
-
-          <div>
-            <q-btn
-              onclick="AddData()"
-              label="Submit"
-              type="submit"
-              color="secondary"
-              id="Submit"
-            />
-            <q-btn
-              id="Update"
-              label="Update"
-              color="secondary"
-              flat
-              class="q-ml-sm"
-              onclick="AddData()"
-            />
-          </div>
-        </q-form>
-      </div>
-    </div>
-    <hr />
-    <div class="row q-mt-md">
-      <div class="col-12 self-center">
-        <q-table
-          title="Treats"
-          :rows="rows"
-          :columns="columns"
-          row-key="name"
+  <div
+    class="full-width row wrap justify-center items-center content-center q-pa-md q-mt-lg"
+  >
+    <div class="col-12 col-md-6 self-center formulario text-center">
+      <q-form id="form" @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+        <q-input filled label="Tu nombre*" hint="Name and surname" id="name" />
+        <q-input
+          filled
+          label="Vistas promedio *"
+          id="vistas"
+          hint="Name and surname"
         />
+        <q-input
+          filled
+          label="Ingresos*"
+          id="ingresos"
+          hint="Name and surname"
+        />
+
+        <q-input filled type="number" label="Gastos *" id="gastos" />
+
+        <div>
+          <q-btn
+            id="Submit"
+            label="Submit"
+            type="submit"
+            color="secondary"
+            onclick="AddData()"
+          />
+          <q-btn
+            label="Update"
+            type="Update"
+            color="secondary"
+            flat
+            id="Update"
+            onclick="AddData()"
+            class="q-ml-sm"
+          />
+        </div>
+      </q-form>
+    </div>
+
+    <div class="listado col-12 col-md-6 self-center">
+      <div class="q-pa-md">
+        <q-markup-table class="crudTable">
+          <thead>
+            <tr>
+              <th class="text-left">Artista</th>
+              <th class="text-right">Vistas</th>
+              <th class="text-right">Ingresos</th>
+              <th class="text-right">Gastos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left">Ale Xan</td>
+              <td class="text-right">159</td>
+              <td class="text-right">6</td>
+              <td class="text-right">24</td>
+            </tr>
+          </tbody>
+        </q-markup-table>
       </div>
     </div>
   </div>
 </template>
-
+<style lang="scss" scoped>
+.formulario {
+  max-width: 400px;
+  overflow: auto;
+  width: 100%;
+}
+.listado {
+  width: 100%;
+  overflow: auto;
+}
+</style>
 <script>
-const columns = [
-  {
-    name: "name",
-    required: true,
-    label: "Dessert (100g serving)",
-    align: "left",
-    field: (row) => row.name,
-    format: (val) => `${val}`,
-    sortable: true,
-  },
-  {
-    name: "calories",
-    align: "center",
-    label: "Calories",
-    field: "calories",
-    sortable: true,
-  },
-  { name: "fat", label: "Fat (g)", field: "fat", sortable: true },
-  { name: "carbs", label: "Carbs (g)", field: "carbs" },
-  { name: "protein", label: "Protein (g)", field: "protein" },
-  { name: "sodium", label: "Sodium (mg)", field: "sodium" },
-  {
-    name: "calcium",
-    label: "Calcium (%)",
-    field: "calcium",
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
-  },
-  {
-    name: "iron",
-    label: "Iron (%)",
-    field: "iron",
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
-  },
-];
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var vistas = document.getElementById("vistas").value;
+  var ingresos = document.getElementById("ingresos").value;
+  var gastos = document.getElementById("gastos").value;
 
-const rows = [
-  {
-    name: "Frozen Yogurt",
-    calories: 159,
-    fat: 6.0,
-    carbs: 24,
-    protein: 4.0,
-    sodium: 87,
-    calcium: "14%",
-    iron: "1%",
-  },
-  {
-    name: "Ice cream sandwich",
-    calories: 237,
-    fat: 9.0,
-    carbs: 37,
-    protein: 4.3,
-    sodium: 129,
-    calcium: "8%",
-    iron: "1%",
-  },
-  {
-    name: "Eclair",
-    calories: 262,
-    fat: 16.0,
-    carbs: 23,
-    protein: 6.0,
-    sodium: 337,
-    calcium: "6%",
-    iron: "7%",
-  },
-  {
-    name: "Cupcake",
-    calories: 305,
-    fat: 3.7,
-    carbs: 67,
-    protein: 4.3,
-    sodium: 413,
-    calcium: "3%",
-    iron: "8%",
-  },
-  {
-    name: "Gingerbread",
-    calories: 356,
-    fat: 16.0,
-    carbs: 49,
-    protein: 3.9,
-    sodium: 327,
-    calcium: "7%",
-    iron: "16%",
-  },
-  {
-    name: "Jelly bean",
-    calories: 375,
-    fat: 0.0,
-    carbs: 94,
-    protein: 0.0,
-    sodium: 50,
-    calcium: "0%",
-    iron: "0%",
-  },
-  {
-    name: "Lollipop",
-    calories: 392,
-    fat: 0.2,
-    carbs: 98,
-    protein: 0,
-    sodium: 38,
-    calcium: "0%",
-    iron: "2%",
-  },
-  {
-    name: "Honeycomb",
-    calories: 408,
-    fat: 3.2,
-    carbs: 87,
-    protein: 6.5,
-    sodium: 562,
-    calcium: "0%",
-    iron: "45%",
-  },
-  {
-    name: "Donut",
-    calories: 452,
-    fat: 25.0,
-    carbs: 51,
-    protein: 4.9,
-    sodium: 326,
-    calcium: "2%",
-    iron: "22%",
-  },
-  {
-    name: "KitKat",
-    calories: 518,
-    fat: 26.0,
-    carbs: 65,
-    protein: 7,
-    sodium: 54,
-    calcium: "12%",
-    iron: "6%",
-  },
-];
+  if (name == "") {
+    alert("Nombre requerido");
+    return false;
+  }
 
-export default {
-  setup() {
-    return {
-      columns,
-      rows,
-    };
-  },
-};
+  if (vistas == "") {
+    alert("Numero de vistas requerido");
+    return false;
+  }
+
+  if (ingresos == "") {
+    alert("Ingresos requerido");
+    return false;
+  }
+
+  if (gastos == "") {
+    alert("Ingresos requerido");
+    return false;
+  }
+
+  return true;
+}
+
+function showData() {
+  var peopleList;
+  if (localStorage.getItem("peopleList") == null) {
+    peopleList = [];
+  } else {
+    peopleList = JSON.parse(localStorage.getItem("peopleList"));
+  }
+
+  var html = "";
+  peopleList.forEach(function (element, index) {
+    html += "<tr>";
+    html += "<td>" + element.name + "</td>";
+    html += "<td>" + element.vistas + "</td>";
+    html += "<td>" + element.ingresos + "</td>";
+    html += "<td>" + element.gastos + "</td>";
+    html +=
+      '<td><q-btn onclick="deleteData(' +
+      index +
+      ')" class="color: white" label="Fuchsia"">Delete</q-btn> ';
+    '<td><q-btn onclick="updateData(' +
+      index +
+      ')" class="color: white" label="Fuchsia"">edit</q-btn> ';
+    html += "</tr>";
+  });
+
+  document.querySelector("#crudTable tbody").innerHTML = html;
+}
+
+// document.onload = showData();
+
+// añadir data
+function AddData() {
+  if (validateForm() == true) {
+    var name = document.getElementById("name").value;
+    var vistas = document.getElementById("vistas").value;
+    var ingresos = document.getElementById("ingresos").value;
+    var gastos = document.getElementById("gastos").value;
+
+    var peopleList;
+    if (localStorage.getItem("peopleList") == null) {
+      peopleList = [];
+    } else {
+      peopleList = JSON.parse(localStorage.getItem("peopleList"));
+    }
+    peopleList.push({
+      name: name,
+      vistas: vistas,
+      ingresos: ingresos,
+      gastos: gastos,
+    });
+
+    localStorage.setItem("peopleList", JSON.stringify(peopleList));
+    // showData();
+    document.getElementById("name").value = "";
+    document.getElementById("vistas").value = "";
+    document.getElementById("ingresos").value = "";
+    document.getElementById("gastos").value = "";
+  }
+}
 </script>

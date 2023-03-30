@@ -48,8 +48,7 @@
         </div>
         <div class="col-12 col-sm-4 col-md-6 text-center">
           <div class="imgBox">
-            <!-- <img id="splash" src="public/splash.png" alt="splash" /> -->
-            <img src="src/assets/img/soto.png" alt="soto" />
+            <img src="~assets/img/soto.png" alt="soto" />
           </div>
         </div>
       </div>
