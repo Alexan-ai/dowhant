@@ -55,7 +55,7 @@
     </section>
 
     <section class="content">
-      <div class="row wrap text-left flex-center text-dark">
+      <div class="row wrap text-left flex-center text-dark" data-aos="fade-up">
         <div class="col-12 col-md-6 col-lg-4 info-text flex-center">
           <h5 class="text-bold">
             <q-avatar
@@ -141,13 +141,13 @@
 
     <section class="secciones">
       <div class="row">
-        <div class="col-12 flex-center text-center">
+        <div class="col-12 flex-center text-center" data-aos="zoom-in">
           <div class="imgDashbord shadow-3">
             <img style="height;: 100%" src="~assets/img/wtf.jpg" alt="" />
           </div>
         </div>
       </div>
-      <div class="row flex-center q-mt-xl info-dash">
+      <div class="row flex-center q-mt-xl info-dash" data-aos="fade-left">
         <div class="col-12 col-sm-4 shadow-3 img_order1">
           <img src="~assets/img/asd.png" alt="" />
         </div>
@@ -163,7 +163,7 @@
           </p>
         </div>
       </div>
-      <div class="row flex-center q-mt-xl info-dash">
+      <div class="row flex-center q-mt-xl info-dash" data-aos="fade-right">
         <div class="col-12 col-md-7 offset-1 text-dark text-left omg_order3">
           <span class="text-bold">MAS INFO</span>
           <h4 class="text-bold">Progress Tracking</h4>
@@ -180,7 +180,7 @@
           <img src="~assets/img/asd.png" alt="" />
         </div>
       </div>
-      <div class="row flex-center q-mt-xl info-dash">
+      <div class="row flex-center q-mt-xl info-dash" data-aos="fade-left">
         <div class="col-12 col-sm-4 shadow-3 img_order3">
           <img src="~assets/img/asd.png" alt="" />
         </div>
@@ -269,7 +269,7 @@
     </section>
 
     <section class="coment q-mb-xl q-mt-xl">
-      <div class="q-pa-md">
+      <div class="q-pa-md" data-aos="fade-down">
         <div class="row visualizer flex-center">
           <div class="col-12 text-center">
             <div>
