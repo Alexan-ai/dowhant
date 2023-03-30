@@ -4,7 +4,7 @@
     <div class="q-pa-md q-gutter-sm">
       <q-toolbar elevated class="text-dark navbar-class q-mt-md q-mb-xl">
         <q-avatar>
-          <img src="src/assets/img/logo.png" alt="" />
+          <img src="~assets/img/logo.png" alt="" />
         </q-avatar>
         <q-btn class="desktop-only" flat label="Do-Producer" />
         <q-space />
