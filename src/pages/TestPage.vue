@@ -143,13 +143,13 @@
       <div class="row">
         <div class="col-12 flex-center text-center">
           <div class="imgDashbord shadow-3">
-            <img style="height;: 100%" src="src/assets/img/wtf.jpg" alt="" />
+            <img style="height;: 100%" src="~assets/img/wtf.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="row flex-center q-mt-xl info-dash">
         <div class="col-12 col-sm-4 shadow-3 img_order1">
-          <img src="src/assets/img/asd.png" alt="" />
+          <img src="~assets/img/asd.png" alt="" />
         </div>
         <div class="col-12 col-md-7 offset-1 text-dark text-left tx_order1">
           <span class="text-bold">MAS INFO</span>
@@ -177,12 +177,12 @@
           </p>
         </div>
         <div class="col-12 shadow-3 col-sm-4">
-          <img src="src/assets/img/asd.png" alt="" />
+          <img src="~assets/img/asd.png" alt="" />
         </div>
       </div>
       <div class="row flex-center q-mt-xl info-dash">
         <div class="col-12 col-sm-4 shadow-3 img_order3">
-          <img src="src/assets/img/asd.png" alt="" />
+          <img src="~assets/img/asd.png" alt="" />
         </div>
         <div class="col-12 col-md-7 offset-1 text-dark text-left">
           <span class="text-bold">MAS INFO</span>
@@ -213,7 +213,7 @@
       >
         <div class="col-6 self-center content_img">
           <img
-            src="src/assets/img/macbook.png"
+            src="~assets/img/macbook.png"
             alt=""
             style="width: 100%; height: 100%"
             class="q-pa-md flex-start"
@@ -319,7 +319,7 @@
 
             <q-carousel-slide name="style" class="column no-wrap flex-center">
               <q-avatar size="70px">
-                <img style="object-fit: cover" src="src/assets/img/sho.jpeg" />
+                <img style="object-fit: cover" src="~assets/img/sho.jpeg" />
               </q-avatar>
               <b class="q-mt-sm">Alé Xan</b>
               <div class="q-mt-md text-center">
@@ -340,7 +340,7 @@
             </q-carousel-slide>
             <q-carousel-slide name="tv" class="column no-wrap flex-center">
               <q-avatar size="70px">
-                <img style="object-fit: cover" src="src/assets/img/gordo.jpg" />
+                <img style="object-fit: cover" src="~assets/img/gordo.jpg" />
               </q-avatar>
               <b class="q-mt-sm">Efrenyer C.</b>
               <div class="q-mt-md text-center">
@@ -361,10 +361,7 @@
             </q-carousel-slide>
             <q-carousel-slide name="layers" class="column no-wrap flex-center">
               <q-avatar size="70px">
-                <img
-                  style="object-fit: cover"
-                  src="src/assets/img/compaye.jpg"
-                />
+                <img style="object-fit: cover" src="~assets/img/compaye.jpg" />
               </q-avatar>
               <b class="q-mt-sm">Jeremy Vivas</b>
               <div class="q-mt-md text-center">
@@ -385,7 +382,7 @@
             </q-carousel-slide>
             <q-carousel-slide name="map" class="column no-wrap flex-center">
               <q-avatar size="70px">
-                <img style="object-fit: cover" src="src/assets/img/karo.jpeg" />
+                <img style="object-fit: cover" src="~assets/img/karo.jpeg" />
               </q-avatar>
               <b class="q-mt-sm">Karolain Valera</b>
               <div class="q-mt-md text-center">
@@ -413,7 +410,7 @@
       <div class="row">
         <div class="logo flex-center text-left q-pa-md col-6">
           <q-img
-            src="src/assets/img/logo.png"
+            src="~assets/img/logo.png"
             spinner-color="dark"
             style="height: 50px; max-width: 50px"
             class="q-mb-lg"
